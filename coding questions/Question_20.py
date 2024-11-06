@@ -2,9 +2,9 @@
 
 def add(a: int, b: int) -> int:
     while b != 0:
-        carry = a & b
+        carry = (a & b) << 1
         a = a ^ b
-        b = carry << 1
+        b = carry
     return a
 
 
